@@ -29,10 +29,10 @@ description:           >
   with a focus on personal sites that are meant to impress.
 
 # A shorter description for the sidebar.
-tagline:               Change `tagline` in `_config.yml`
+tagline:               PhD student in Computational Neuroscience @UCM
 
 # A list of keywords for your blog
-keywords:              []
+keywords:              [keyword1, keyword2]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
@@ -44,15 +44,23 @@ author:
   # Used by `jekyll-feed`:
   name:                Jesús Cabrera-Álvarez
   email:               Jescab01@ucm.es
+
   # # Used by `jekyll-seo-tag`:
   twitter:             Jescab01
 
+
 # Add links to the sidebar.
 menu:
-  - title:             Example
+  - title:             Examp
     url:               /example/
-  - title:             Documentation
-    url:               /docs/
+
+
+  - title:             Blog
+    url:               /blog/
+  - title:             Curriculum
+    url:               /cv/
+  - title:             Research
+    url:               /research/
   - title:             About
     url:               /about/
 
@@ -86,7 +94,7 @@ remote_theme: hydecorp/hydejack@v9
 
 # Customizaton
 # ----------------------------------------------------------------------------------------
- 
+
 # Sidebar image and theme color of the site.
 accent_image:          /assets/img/door.jpg
 accent_color:          rgb(79,177,186)
@@ -215,7 +223,7 @@ hydejack:
   # This will increase site build speed dramatically!
   no_inline_css:       false
 
-  # Set to `true` if you don't intend on changing the accent color on a per-page basis. 
+  # Set to `true` if you don't intend on changing the accent color on a per-page basis.
   # This will increase site build speed!
   no_page_style:       false
 
@@ -258,7 +266,7 @@ hydejack:
 
   # Buyers of the PRO version can opt to hide all dates from the theme.
   # Frequent consumers of online content will know that nothing devalues a post like
-  # seeing an old date. 
+  # seeing an old date.
   hide_dates:          false
 
   # TODO
@@ -399,21 +407,21 @@ jekyll_compose:
   default_front_matter:
     drafts:
       layout: post
-      description: > 
+      description: >
         A short ~160 character description of your post for search engines,
         social media previews, etc.
       image:
         path: /assets/img/sidebar-bg.jpg
     posts:
       layout: post
-      description: > 
+      description: >
         A short ~160 character description of your post for search engines,
         social media previews, etc.
       image:
         path: /assets/img/sidebar-bg.jpg
     projects:
       layout: project
-      description: > 
+      description: >
         A short ~160 character description of your post for search engines,
         social media previews, etc.
       image:
