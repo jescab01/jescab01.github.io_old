@@ -37,7 +37,7 @@ tagline:               PhD student in Computational Neuroscience @UCM
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  /assets/img/ProPhoto.jpg
+logo:                  /assets/img/pic_cerebrito_uned.jpg
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
@@ -55,7 +55,7 @@ menu:
     url:               /research/
   - title:             Curriculum
     url:               /curriculum/
-  - title:             About
+  - title:             About me
     url:               /about/
 
 

@@ -8,13 +8,14 @@ jescab01:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    I am a psychologist that has travel all the way from social sciences to biology (i.e. neuroscience) looking
-    for concrete and accurate explanations of human behaviour. I use computational tools to test 
-    hypothesis (in silico) about human brain function as a way of shining light over cognition and behaviour. 
+    I am a psychologist that has travelled all the way down from social sciences to biology (i.e. neuroscience) looking
+    for concrete and accurate answers about human behaviour. 
+    I use computational tools to test hypothesis about human brain function through in-silico experiments as a
+    way of shining light over cognition and behaviour. 
 
   # This photo will be used in the about section
   picture:
-    path:            /assets/img/pic_cerebrito_uned.jpg
+    path:            /assets/img/ProPhoto.jpg
     # srcset is optional, but can be used to provide higher res versions for retina displays
 #    srcset:
 #      1x:            https://via.placeholder.com/128x128

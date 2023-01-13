@@ -1,5 +1,4 @@
 # Hydejack Starter Kit
-
 A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.com/).
 
 Hydejack is a template version of Jeckyll, 
@@ -23,4 +22,20 @@ in its [documentation](https://hydejack.com/docs/) pages find out more
 
 [download]: https://github.com/hydecorp/hydejack-starter-kit/archive/master.zip
 
-Redo.
+
+----
+
+## How to inset figures in Markdown
+Two approaches, the first one may be more efficient, so the reader can have a quick look on the static 
+figures before clicking on them and going to a slower loading of the dynamic figures.
+
+1) oppening the figure in another window.
+[<img src="/research/th/icon_th.png">](/research/th/figs/Criticality_th_noisy_phetero.html)
+
+2) inserting the figure in the same page.
+<iframe width="100%" height="400"
+  src="/research/th/figs/Criticality_th_noisy_phetero.html"
+  frameborder="0" allow="autoplay; encrypted-media"
+  allowfullscreen></iframe>
+
+

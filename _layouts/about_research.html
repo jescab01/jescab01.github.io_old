@@ -14,8 +14,13 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-layout: base_projects
+layout: base
 ---
+
+{% assign date_formats  = site.data.strings.date_formats               %}
+{% assign list_group_by = date_formats.list_group_by | default:"%Y"    %}
+{% assign list_entry    = date_formats.list_entry    | default:"%d %b" %}
+{% assign prev_date = 0 %}
 
 <article class="page mb6" role="article">
 
@@ -24,10 +29,10 @@ layout: base_projects
     {% include components/message.html text=page.description hide=page.hide_description %}
   </header>
 
-  {% for p_hash in site.data.projects %}
+  {% for project_hash in site.data.projects %}
 
     <p>
-      {% assign proj_ = p_hash[0] %}
+      {% assign proj_ = project_hash[0] %}
       {% assign plugins = site.plugins | default:site.gems %}
       {% assign project = site.data.projects[proj_] | default:site.data.projects.first[1]  %}
 
@@ -35,20 +40,23 @@ layout: base_projects
         <h3 class="page-title">{{project.name}}<small><small> &nbsp;&nbsp; (from {{project.date_start}} to {{project.date_end}})</small></small></h3>
       </a>
 
-      {% capture project_x %}
-        {% if project.picture %}
-          {% include_cached components/hy-img.html class="avatar" img=project.picture alt=project.name %}
-        {% elsif plugins contains 'jekyll-avatar' %}
-          {% assign avatar = project.social.github | default:project.github.username | default:project.github %}
-          {% include components/avatar-tag.html user=avatar %}
+      {% if project.picture %}
+        {% include_cached components/hy-img.html class="avatar" img=project.picture alt=project.name %}
+      {% endif %}
+
+      {{project.about | markdownify}}
+
+      {% for cat in site.categories %}
+        {% if cat[0] == proj_ %}
+          {% for post in cat[1] %}
+            {% assign current_date = post.date | date:list_group_by %}
+            {% include_cached components/post-list-item.html post=post format=list_entry %}
+          {% endfor %}
         {% endif %}
+      {% endfor %}
 
-        {{ project.about | markdownify }}
-      {% endcapture %}
 
-      {{project_x}}
-    </p>
-    <br>
+    </p><br>
   {% endfor %}
 
 </article>
