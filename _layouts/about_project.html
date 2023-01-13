@@ -43,10 +43,6 @@ layout: base_projects
 
   {% assign posts = site.categories[page.slug] | default:site.tags[page.slug] | default:site.posts %}
 
-  {% assign date_formats  = site.data.strings.date_formats               %}
-  {% assign list_group_by = date_formats.list_group_by | default:"%Y"    %}
-  {% assign list_entry    = date_formats.list_entry    | default:"%d %b" %}
-  {% assign prev_date = 0 %}
 
   {% for cat in site.categories %}
     {% if cat[0] == page.project and cat[1].size > 0 %}
