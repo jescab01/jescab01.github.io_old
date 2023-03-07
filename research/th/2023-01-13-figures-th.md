@@ -3,7 +3,7 @@ layout: post
 
 description: >
   **Interactive figures**, click on them to access the dynamical view. 
-  These are the figures of our study regarding the impact of thalamus in rsFC.
+  These are figures from our study about the impact of thalamus in rsFC.
   
 sitemap: false
 hide_last_modified: false
