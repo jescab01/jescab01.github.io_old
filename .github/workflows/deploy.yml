@@ -76,9 +76,14 @@ jobs:
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
+
       - name: Install Dependencies 📦
         run: |
-          bundle install
+          gem install bundler
+          bundle update
+          bundle install --jobs 4 --retry 3
+
+
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
@@ -91,12 +96,20 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
+
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build
+
+      - name: Setup Node.js 🌐
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          cache: "npm"
+
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss

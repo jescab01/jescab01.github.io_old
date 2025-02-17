@@ -39,3 +39,4 @@ end
 
 gem "fiddle", "~> 1.1"
 gem "kramdown-parser-gfm"
+gem 'faraday-retry'
