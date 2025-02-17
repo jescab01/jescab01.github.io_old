@@ -21,7 +21,6 @@ group :jekyll_plugins do
     gem 'jekyll-toc'
     gem 'jekyll-twitter-plugin'
     gem 'jemoji'
-    gem 'github-pages'
 
     gem 'classifier-reborn'  # used for content categorization during the build
 end
@@ -39,3 +38,4 @@ group :other_plugins do
 end
 
 gem "fiddle", "~> 1.1"
+gem "kramdown-parser-gfm"
